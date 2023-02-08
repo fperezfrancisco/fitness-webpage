@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600;800&family=Unbounded:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--SWIPER CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Athletes High Performance Center Landing Page</title>
+  </head>
+  <body>
+    <header>
+      <div class="headerBar flex">
+        <div class="logoHomeBox"><a href="#" class="logoLink">AthElite</a></div>
+        <div class="nav flex">
+          <nav class="navigationBox">
+            <ul class="navList">
+              <li class="navItem">
+                <a href="#about" class="navLink">About</a>
+              </li>
+              <li class="navItem">
+                <a href="#weOffer" class="navLink">What We Offer</a>
+              </li>
+              <li class="navItem">
+                <a href="#testimonial" class="navLink">Testimonials</a>
+              </li>
+              <li class="navItem">
+                <a href="#plans" class="navLink">Plans</a>
+              </li>
+              <li class="navItem">
+                <a href="#footer" class="navLink">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="mobileNav show flex" id="menuBtn">
+          <img src="images/menu-closed-icon.png" alt="open" class="menuIcon" />
+        </div>
+        <div class="dropMenu hide">
+          <ul class="dropMenuList flex">
+            <li class="navItem dropMenuItem">
+              <a href="#about" class="navLink">About</a>
+            </li>
+            <li class="navItem dropMenuItem">
+              <a href="#weOffer" class="navLink">What We Offer</a>
+            </li>
+            <li class="navItem dropMenuItem">
+              <a href="#testimonial" class="navLink">Testimonials</a>
+            </li>
+            <li class="navItem dropMenuItem">
+              <a href="#plans" class="navLink">Plans</a>
+            </li>
+            <li class="navItem dropMenuItem">
+              <a href="#footerContactSection" class="navLink">Contact</a>
+            </li>
+            <li class="navItem dropMenuItem" id="closeBtn">
+              <button class="closeMenu">Close</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="mainPage">
+      <section class="mainHero pageSection">
+        <div class="overlay"></div>
+        <div class="textBox">
+          <div class="titleText">
+            <h1 class="largeTitle">
+              <span class="smallTitle">For</span> Athletes
+              <span class="smallTitle">made by</span> Athletes
+            </h1>
+          </div>
+          <div class="buttonBox">
+            <a href="#" class="linkButton">
+              <button class="freeTrial">Try Free</button>
+            </a>
+            <a href="#plans" class="linkButton">
+              <button class="plans">Plans</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="pageSection aboutSection" id="about">
+        <div class="textBox">
+          <div class="titleText sectionTitle flex">
+            <h2 class="mediumTitle">Train Like a Pro</h2>
+          </div>
+          <div class="sectionText">
+            <p class="sectionPara">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
+              fugiat nostrum doloribus, accusamus vel placeat id autem
+              laudantium illum rem odit sapiente? Exercitationem ipsa,
+              laudantium iste nam architecto dolorem doloremque!
+            </p>
+          </div>
+        </div>
+        <div class="iconsBox grid">
+          <div class="icon flex" id="qualityEquip">
+            <h3 class="iconTitle smallTitle">Quality Equipment</h3>
+            <p class="iconDescription">
+              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+              libero, sit amet adipisc.
+            </p>
+          </div>
+          <div class="icon flex" id="nutrition">
+            <h3 class="iconTitle smallTitle">Nutrional Plans</h3>
+            <p class="iconDescription">
+              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+              libero, sit amet adipisc.
+            </p>
+          </div>
+          <div class="icon flex" id="sportSpecific">
+            <h3 class="iconTitle smallTitle">Sport-specific Plans</h3>
+            <p class="iconDescription">
+              Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+              libero, sit amet adipisc.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="pageSection offerSection" id="weOffer">
+        <div class="innerOffer grid" id="qualitySpace">
+          <div class="textSection flex">
+            <div class="textBox flex">
+              <div class="largeNumber">01</div>
+              <h2 class="mediumTitle">High Quality Environment</h2>
+              <p class="sectionPara">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatem, deleniti ea delectus rerum, reprehenderit voluptas,
+                recusandae explicabo eum quisquam rem magni expedita. Corporis
+                dicta, id pariatur excepturi doloribus adipisci iste.
+              </p>
+            </div>
+          </div>
+          <div class="imageSection">
+            <picture class="blockPicture">
+              <source
+                media="(min-width: 1200px)"
+                srcset="images/gym-view-large.jpeg"
+              />
+              <source
+                media="(min-width: 678px)"
+                srcset="images/gym-view-wide.jpeg"
+              />
+              <img
+                src="images/gym-view-small.jpeg"
+                alt="AthElite"
+                class="imageBlock"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="innerOffer grid" id="goals">
+          <div class="textSection flex">
+            <div class="textBox flex">
+              <div class="largeNumber">02</div>
+              <h2 class="mediumTitle">Bring Your Goals To Life</h2>
+              <p class="sectionPara">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatem, deleniti ea delectus rerum, reprehenderit voluptas,
+                recusandae explicabo eum quisquam rem magni expedita. Corporis
+                dicta, id pariatur excepturi doloribus adipisci iste.
+              </p>
+            </div>
+          </div>
+          <div class="imageSection">
+            <picture class="blockPicture">
+              <source
+                media="(min-width: 1200px)"
+                srcset="images/jessica-trainer-large.jpeg"
+              />
+              <source
+                media="(min-width: 678px)"
+                srcset="images/jessica-trainer-wide.jpeg"
+              />
+              <img
+                src="images/jessica-trainer-small.jpeg"
+                alt="AthElite"
+                class="imageBlock"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="innerOffer grid" id="focus">
+          <div class="textSection flex">
+            <div class="textBox flex">
+              <div class="largeNumber">03</div>
+              <h2 class="mediumTitle">Full Focus</h2>
+              <p class="sectionPara">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatem, deleniti ea delectus rerum, reprehenderit voluptas,
+                recusandae explicabo eum quisquam rem magni expedita. Corporis
+                dicta, id pariatur excepturi doloribus adipisci iste.
+              </p>
+            </div>
+          </div>
+          <div class="imageSection">
+            <picture class="blockPicture">
+              <source
+                media="(min-width: 1200px)"
+                srcset="images/gym-setup-girl-large.jpeg"
+              />
+              <source
+                media="(min-width: 678px)"
+                srcset="images/gym-setup-girl-wide.jpeg"
+              />
+              <img
+                src="images/gym-setup-girl-small.jpeg"
+                alt="AthElite"
+                class="imageBlock"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="pageSection testimonialSection flex" id="testimonial">
+        <div class="overlay"></div>
+
+        <div class="testimonialContainer mySwiper">
+          <div class="testiContent swiper-wrapper">
+            <div class="slide textBox swiper-slide">
+              <p class="quoteText">
+                "Since joining this program, my soccer fitness has improved
+                leading my overall perfomance on the field to sky rocket. 10 out
+                of 10 recommend to any serious athlete that is looking to gain
+                an edge and perfect their craft."
+              </p>
+              <p class="author">Ryan Scottsfield</p>
+              <p class="quoteInfo">
+                age 16, Soccer <span class="specialColor">|</span> Irvine, CA
+              </p>
+            </div>
+            <div class="slide textBox swiper-slide">
+              <p class="quoteText">
+                "My strength and speed are much better now from joining the
+                AthElite program. I wish I would've joined sooner!"
+              </p>
+              <p class="author">Savanah</p>
+              <p class="quoteInfo">
+                age 19, basketball <span class="specialColor">|</span> Beverly
+                Hills, CA
+              </p>
+            </div>
+            <div class="slide textBox swiper-slide">
+              <p class="quoteText">
+                "High quality, engaging, and affordable. Getting me right for my
+                football season."
+              </p>
+              <p class="author">James Martinez</p>
+              <p class="quoteInfo">
+                age 11, Football <span class="specialColor">|</span> East LA, CA
+              </p>
+            </div>
+          </div>
+          <div class="swiper-button-next nav-btn"></div>
+          <div class="swiper-button-prev nav-btn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="pageSection plansSection" id="plans">
+        <div class="textBox">
+          <div class="titleText sectionTitle flex">
+            <h2 class="mediumTitle">Choose Your Plan</h2>
+          </div>
+        </div>
+        <div class="plansGrid grid">
+          <div class="planBox flex" id="basic">
+            <div class="price">$45</div>
+            <div class="subType">per Month</div>
+            <h3 class="planTitle">Basic Plan</h3>
+            <p class="planDescription">
+              Full access to facility and equipment. One free session to any
+              class or clinic.
+            </p>
+            <button class="signUp">Sign Up</button>
+            <button class="learnMore">Learn More</button>
+          </div>
+          <div class="planBox flex" id="seasonal">
+            <div class="price">$150</div>
+            <div class="subType">per 3-Months</div>
+            <h3 class="planTitle">Seasonal Plan</h3>
+            <p class="planDescription">
+              Seasonal Plan for an intense 3-month period. Top instructors plus
+              a full nutrional & recovery plan. Full access to facility &
+              equipment.
+            </p>
+            <button class="signUp">Sign Up</button>
+            <button class="learnMore">Learn More</button>
+          </div>
+          <div class="planBox flex" id="allIn">
+            <div class="price">$750</div>
+            <div class="subType">per Year</div>
+            <h3 class="planTitle">All In Plan</h3>
+            <p class="planDescription">
+              Personalized program for your sport for the entire year.
+              Nutritional plan, recovery, and progress tracking.
+            </p>
+            <button class="signUp">Sign Up</button>
+            <button class="learnMore">Learn More</button>
+          </div>
+        </div>
+      </section>
+      <!---
+      <section class="pageSection sponsorsSection" id="sponsors"></section>
+      -->
+    </main>
+    <footer class="mainFooter" id="footer">
+      <div class="footerContainer grid">
+        <div class="footerInnerBox flex">
+          <div class="footerLogo logoHomeBox">AthElite</div>
+          <p class="footerAbout sectionPara">
+            Cum sociis Theme natoque penatibus et magnis dis parturie montes,
+            nascetur ridiculus mus. Curabitur ullamcorper.
+          </p>
+          <div class="outreachBox">
+            <div class="call outreach">661-xxx-xxxx</div>
+            <div class="address outreach">84 Main Collins Street</div>
+            <div class="hours outreach">Mon - Sun 6.00 - 18.00</div>
+          </div>
+        </div>
+        <div class="footerInnerBox flex">
+          <h2 class="footerTitle">Latest News</h2>
+          <ul class="newsList">
+            <li class="newsItem">
+              <h3 class="newsHeader">
+                <a href="#" class="fakeLink">FITNESS CLASS FOR YOU</a>
+              </h3>
+              <p class="newsDate">Jan 3, 2023</p>
+            </li>
+            <li class="newsItem">
+              <h3 class="newsHeader">
+                <a href="#" class="fakeLink">TOP EXERCISES FOR 2023</a>
+              </h3>
+              <p class="newsDate">Jan 10, 2023</p>
+            </li>
+            <li class="newsItem">
+              <h3 class="newsHeader">
+                <a href="#" class="fakeLink">UPCOMING EVENTS</a>
+              </h3>
+              <p class="newsDate">DEC 22, 2022</p>
+            </li>
+          </ul>
+        </div>
+        <div class="footerInnerBox flex" id="footerContactSection">
+          <h2 class="footerTitle">Contact</h2>
+          <form action="post" class="contactUsForm" id="contactForm">
+            <ul class="formList">
+              <li class="formItem">
+                <input
+                  type="text"
+                  name="name"
+                  id="contactName"
+                  placeholder="Name"
+                  required
+                />
+              </li>
+              <li class="formItem">
+                <input
+                  type="email"
+                  name="email"
+                  id="contactEmail"
+                  placeholder="Email"
+                  required
+                />
+              </li>
+              <li class="formItem">
+                <textarea
+                  id="Message"
+                  name="Message"
+                  class="fcf-form-control"
+                  rows="6"
+                  maxlength="3000"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </li>
+              <li class="formItem">
+                <button class="submitBtn">Send Message</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <div class="mediaFooter"></div>
+    </footer>
+    <!--SWIPER JS -->
+    <script src="swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

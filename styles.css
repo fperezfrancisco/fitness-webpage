@@ -1,0 +1,904 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* APP STYLING */
+
+:root {
+  --primaryColor400: #165aeb;
+  --primaryColor100: rgb(84, 166, 228);
+  --primaryColor700: rgb(3, 3, 129);
+  --secondaryColor400: rgb(131, 132, 137);
+  --secondaryColor100: lightgray;
+  --secondaryColor700: rgb(64, 64, 64);
+  --secondaryColor900: rgb(42, 41, 41);
+  --mainBlack: rgb(10, 10, 10);
+  --mainWhite: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  color: var(--mainWhite);
+  background-color: var(--mainBlack);
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Unbounded", cursive;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.pageSection {
+  width: 100vw;
+  height: 100%;
+  min-height: 800px;
+  padding: 10%;
+  position: relative;
+}
+
+.largeTitle {
+  font-size: 3rem;
+}
+
+.mediumTitle {
+  font-size: 1.75rem;
+}
+
+.smallTitle {
+  font-size: 1.25rem;
+}
+
+.titleText {
+  margin: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBox {
+  margin: 10px;
+  pad: 5px;
+}
+
+.sectionPara {
+  font-size: 1rem;
+}
+
+p {
+  color: var(--secondaryColor400);
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+  min-width: 75px;
+  min-height: 50px;
+  background-color: var(--primaryColor400);
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  padding: 10px 25px;
+  margin: 0px;
+  box-shadow: none;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  cursor: pointer;
+  /*border-radius: 0.5rem;*/
+}
+
+button:hover {
+  background-color: var(--primaryColor100);
+}
+
+.freeTrial {
+  background-color: var(--secondaryColor400);
+}
+
+.freeTrial:hover {
+  background-color: var(--secondaryColor100);
+}
+
+/* Header / nav styling */
+
+.headerBar {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  height: 10vh;
+  width: 100vw;
+  min-height: 45px;
+  max-height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--mainBlack);
+  /*border-bottom: 1.5px solid var(--primaryColor400);*/
+  /*justify-content: space-around;*/
+}
+
+.logoHomeBox {
+  margin: 2.5px 10px;
+  margin-left: 50px;
+  margin-right: 75px;
+  font-family: "Unbounded", cursive;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: var(--mainWhite);
+}
+
+.logoHomeBox a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logoHomeBox a:active,
+.logoHomeBox a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoHomeBox a:hover {
+  color: var(--primaryColor100);
+}
+
+.nav {
+  display: none;
+  font-family: "Unbounded", cursive;
+  width: 100%;
+  margin-right: 10%;
+  justify-content: flex-end;
+}
+
+.navigationBox {
+  margin: 0px 10px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navItem {
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin: 0px 10px;
+  padding: 0px 10px;
+  text-transform: uppercase;
+}
+
+.navLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navItem a:hover,
+.navItem a:visited,
+.navItem a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navItem a:hover {
+  color: var(--primaryColor100);
+}
+
+.mobileNav {
+  display: flex;
+  margin: 0px 10px;
+  padding: 0px 10px;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  max-width: 75px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.mobileNav:hover {
+  transform: scale(1.1);
+}
+
+.menuIcon {
+  max-width: 100%;
+}
+
+/*DROPMENU STYLING*/
+
+.dropMenu {
+  display: flex;
+  width: 25vw;
+  min-width: 275px;
+  max-width: 350px;
+  height: 110vh;
+  right: 275px;
+  top: -25px;
+  padding: 20% 5%;
+  position: absolute;
+  z-index: 3;
+  background-color: var(--mainBlack);
+  transition: 0.5s;
+}
+
+.dropMenu .dropMenuList {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  list-style-type: none;
+}
+
+.dropMenuList > li {
+  width: 100%;
+  margin: 0px;
+  border-collapse: collapse;
+  padding: 0%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  color: var(--mainWhite);
+}
+
+.dropMenuList > li > a {
+  width: 100%;
+  padding: 10%;
+}
+
+.dropMenuList a:hover,
+.dropMenuList a:active {
+  color: var(--mainWhite);
+}
+
+.dropMenuList li:hover,
+.dropMenuList li:active {
+  background-color: var(--secondaryColor400);
+}
+
+.dropMenuList #closeBtn {
+  padding: 0%;
+  margin-top: 25px;
+  background-color: var(--primaryColor400);
+}
+
+.dropMenu li > button {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+/*
+.show {
+  display: flex;
+}*/
+
+.dropMenu.hide {
+  right: -275px;
+  animation: slide-right 1s ease-out;
+}
+
+.dropMenu.show {
+  right: 0;
+  animation: slide-left 0.5s ease-out;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(275px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(275px);
+  }
+}
+
+/*
+.dropMenu.hide {
+  /*display: block;
+  right: -250px;
+  animation: slide-right 0.5s ease-out;
+}
+
+.dropMenu.show {
+  right: 0;
+  animation: slide-left 0.5s ease;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(250px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(250px);
+  }
+}
+*/
+
+/* MAIN PAGE STYLING */
+
+.mainHero {
+  background-image: url("images/adam-gymshot-large.jpeg");
+  background-position: center 10px;
+  background-size: cover;
+  padding: 0;
+}
+
+.mainHero .textBox {
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  bottom: 15%;
+  margin: auto;
+  width: 85vw;
+  max-width: 300px;
+  line-height: 1;
+}
+
+.mainHero .textBox .largeTitle {
+  margin: 15px 0px;
+  padding: 0%;
+  text-transform: uppercase;
+}
+
+.mainHero .textBox .smallTitle {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.textBox .buttonBox {
+  margin: 40px 0px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonBox button {
+  margin-right: 15px;
+}
+
+/* ABOUT SECTION */
+.aboutSection .textBox {
+  padding: 0% 10%;
+}
+
+.aboutSection .textBox .titleText {
+  text-align: center;
+}
+
+.aboutSection .sectionPara {
+  text-align: center;
+}
+
+.iconsBox {
+  margin: 10% 5%;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-gap: 25px;
+}
+
+.icon {
+  text-align: center;
+  padding: 20px 35px;
+  flex-direction: column;
+}
+
+.icon .iconTitle {
+  margin: 25px 0px;
+}
+
+/* OFFER SECTION */
+.offerSection {
+  padding: 0%;
+  width: 100vw;
+}
+
+.innerOffer {
+  border-bottom: 1px solid var(--mainBlack);
+  width: 100%;
+  align-items: center;
+  background-color: var(--secondaryColor900);
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+}
+
+.innerOffer .textSection {
+  align-items: center;
+  max-width: 100vw;
+}
+
+.innerOffer .textSection .textBox {
+  flex-direction: column;
+  padding: 5% 15%;
+  position: relative;
+}
+
+.innerOffer .textSection .textBox .largeNumber {
+  font-size: 6rem;
+  color: var(--secondaryColor400);
+  letter-spacing: 0.4px;
+  margin-bottom: 5%;
+}
+
+.innerOffer .textSection .textBox .mediumTitle {
+  position: absolute;
+  z-index: 2;
+  bottom: 55%;
+}
+
+/*
+.innerOffer .textSection .textBox .sectionPara {
+  position: absolute;
+  z-index: 2;
+  bottom: 15%;
+}*/
+
+.imageSection {
+  max-width: 100vw;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+/* TESTIMONIAL SECTION */
+
+.testimonialSection {
+  background-color: transparent;
+  position: relative;
+  padding: 0%;
+  /*
+  height: 100vh;
+  min-height: 400px;*/
+  background-image: url("images/soccer-athlete-wide-cover.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.testimonialSection .testimonialContainer {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.testimonialSection .slide {
+  position: relative;
+  padding: 5% 15%;
+  min-height: 325px;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.testimonialSection .slide > p {
+  color: var(--mainWhite);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.testimonialSection .textBox .quote {
+  font-size: 6rem;
+  line-height: 0.5;
+}
+
+.testimonialSection .slide .quoteText {
+  margin-bottom: 10%;
+}
+
+.testimonialSection .slide .author {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  display: block;
+  margin: 5px 0px;
+}
+
+.testimonialSection .slide .quoteInfo {
+  font-size: 1rem;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.testimonialSection .textBox .specialColor {
+  color: var(--primaryColor400);
+}
+
+/* PLANS SECTION */
+
+.plansSection .textBox {
+  text-align: center;
+}
+
+.plansSection .textBox .sectionTitle {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+
+.plansGrid {
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 25px;
+}
+
+.planBox {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--secondaryColor900);
+  padding: 15%;
+  min-height: 550px;
+}
+
+.planBox > p {
+  color: var(--mainWhite);
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.subType {
+  font-weight: 300;
+}
+
+.planDescription {
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 15px 10px;
+}
+
+.planBox button {
+  width: 100%;
+  margin: 5px 0px;
+}
+
+.planBox .learnMore {
+  background-color: var(--secondaryColor400);
+}
+
+.learnMore:hover {
+  background-color: var(--secondaryColor100);
+}
+
+/* FOOTER SECTION */
+
+.mainFooter {
+  width: 100vw;
+  margin: 0;
+  padding: 0%;
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 10%;
+  background-color: var(--secondaryColor700);
+  color: var(--mainWhite);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 25px;
+  justify-content: space-between;
+}
+
+.footerInnerBox {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.footerInnerBox > div,
+.footerInnerBox > p {
+  margin: 10px 0px;
+}
+
+.outreachBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.outreach {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  margin: 2.5px 0px;
+}
+
+.footerTitle {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footerContainer .newsList {
+  list-style-type: none;
+  margin: 5px 0px;
+  padding: 0px;
+  color: var(--secondaryColor400);
+  border-collapse: collapse;
+}
+
+.newsList .newsItem {
+  width: 100%;
+  margin: 0px;
+  padding: 15px 0px;
+  border-top: 1px solid var(--secondaryColor400);
+  border-bottom: 1px solid var(--secondaryColor400);
+}
+
+.newsList .newsItem:nth-child(1) {
+  border-top: none;
+}
+
+.newsList .newsItem:nth-last-child() {
+  border-bottom: none;
+}
+
+.newsItem .newsHeader {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 2.5px;
+}
+
+.newsItem .newsDate {
+  font-weight: 300;
+  letter-spacing: 1.75px;
+}
+
+.fakeLink,
+.fakeLink:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fakeLink:hover,
+.fakeLink:active {
+  color: var(--secondaryColor100);
+  text-decoration: underline;
+}
+
+.contactUsForm {
+  padding: 10px 0px;
+  width: 100%;
+}
+
+.formList {
+  list-style-type: none;
+  padding: 0%;
+  margin: 0px;
+}
+
+.formList .formItem {
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.formItem input {
+  width: 100%;
+  min-height: 60px;
+  color: var(--secondaryColor400);
+  background-color: var(--secondaryColor900);
+  padding: 10px 15px;
+  padding-left: 20px;
+  border: none;
+  box-shadow: none;
+  font-size: 1rem;
+}
+
+.formItem textarea {
+  color: var(--secondaryColor400);
+  background-color: var(--secondaryColor900);
+  width: 100%;
+  padding: 10px 15px;
+  padding-left: 20px;
+  border: none;
+  box-shadow: none;
+  font-size: 1rem;
+}
+
+/*EXTRA SMALL SCREEENS*/
+@media only screen and (max-width: 319px) {
+  .largeTitle {
+    font-size: 2rem;
+  }
+
+  .logoHomeBox {
+    margin-left: 25px;
+    margin-right: 10px;
+  }
+
+  .mobileNav {
+    max-width: 60px;
+  }
+
+  .iconsBox {
+    margin: 10% 5%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+
+  .innerOffer {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .innerOffer .textSection .textBox .mediumTitle {
+    bottom: 70%;
+  }
+
+  .testimonialSection .textBox > p {
+    font-size: 1.25rem;
+  }
+
+  .plansGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 15px;
+  }
+
+  .footerContainer {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/*SMALL MOBILE SCREEENS*/
+@media only screen and (min-width: 320px) {
+}
+
+/*IPADS AND MEDIUM SCREENS*/
+@media only screen and (min-width: 480px) {
+}
+
+/*LARGE TABLETS AND SMALL LAPTOPS*/
+@media only screen and (min-width: 769px) {
+  .mobileNav {
+    margin-right: 5%;
+  }
+
+  .mainHero .textBox .largeTitle {
+    font-size: 5rem;
+  }
+
+  .mainHero .textBox .smallTitle {
+    font-size: 2rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin: 0% 25px;
+    text-rendering: auto;
+  }
+
+  .footerContainer {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+/*LARGE SCREENS SCREEENS*/
+@media only screen and (min-width: 1025px) {
+  /*navigation*/
+
+  .mobileNav {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+  }
+}
